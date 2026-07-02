@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+#root{
+    width: 500px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: antiquewhite;
+    text-align: center;
+}
+button{
+    width: 70px;
+    height: 40px;
+    margin-right: 10px;
+    color: azure;
+
+}
+.counter{
+    height: 200px;
+    width:300px;
+    background-color: blue;
+    text-align: center;
+
+}
+

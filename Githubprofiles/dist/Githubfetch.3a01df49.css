@@ -1,0 +1,55 @@
+.profile {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  display: flex;
+}
+
+.cards {
+  color: #f0f8ff;
+  text-align: center;
+  background-color: #3b3bb8;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 220px;
+  padding: 15px;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.cards:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px #0000004d;
+}
+
+.cards img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+.but {
+  margin-top: 20px;
+}
+
+.inpu {
+  width: 200px;
+  height: 20px;
+  margin-left: 40vw;
+}
+
+button {
+  color: azure;
+  background-color: #5757c6;
+  height: 30px;
+  margin-left: 40px;
+}
+
+#heading {
+  color: #fff;
+  text-align: center;
+  background-color: #4c4cc7;
+  height: 100px;
+}
+/*# sourceMappingURL=Githubfetch.3a01df49.css.map */

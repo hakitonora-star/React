@@ -732,40 +732,43 @@ var _s = $RefreshSig$();
 function PasswordGenerator() {
     _s();
     const [Password, setPassword] = (0, _react.useState)("");
-    const [length, setLength] = (0, _react.useState)(10);
-    const [numberChanged, setnumberChanged] = (0, _react.useState)(false);
-    const [charChanged, setcharChanged] = (0, _react.useState)(false);
-    function generatepassword() {
+    const [length, setLength] = (0, _react.useState)(5);
+    const [Number, setNumber] = (0, _react.useState)(false);
+    const [Character, setCharacter] = (0, _react.useState)(false);
+    const generatepassword = (0, _react.useCallback)(()=>{
         let str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        if (numberChanged) str += "0123456789";
-        if (charChanged) str += "+-*/#@$%^&*!~?";
+        if (Number) str += "1234567890";
+        if (Character) str += "~!@#$%^&*()-?+-*/";
         let pass = "";
         for(let i = 0; i < length; i++)pass += str[Math.floor(Math.random() * str.length)];
         setPassword(pass);
-    }
+    // ye iska mtlb ise andar jo funcntion hoga vo jbhi chlega jab iski depdency change hogi
+    }, [
+        length,
+        Character,
+        Number
+    ]);
     (0, _react.useEffect)(()=>{
         generatepassword();
     }, [
-        length,
-        numberChanged,
-        charChanged
-    ]) //us effect first baar chla but uske baad tabhi chlega jab length change hogi numberchange hoga ya char change hoga
-    ;
+        Number,
+        Character,
+        length
+    ]); //us effect first baar chla but uske baad tabhi chlega jab length change hogi numberchange hoga ya char change hoga
     //generatepassword(); // ye infinte loop ho jayege isile useeffect use karenge
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 children: [
-                    "Password is ",
+                    "Password is:",
                     Password
                 ]
             }, void 0, true, {
                 fileName: "main.js",
                 lineNumber: 42,
-                columnNumber: 9
+                columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "second",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         type: "range",
@@ -776,38 +779,38 @@ function PasswordGenerator() {
                     }, void 0, false, {
                         fileName: "main.js",
                         lineNumber: 44,
-                        columnNumber: 13
+                        columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                         children: [
-                            "Length is:",
+                            "length:",
                             length
                         ]
                     }, void 0, true, {
                         fileName: "main.js",
                         lineNumber: 45,
-                        columnNumber: 13
+                        columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         type: "checkbox",
-                        defaultChecked: numberChanged,
-                        onChange: ()=>setnumberChanged(!numberChanged)
+                        defaultChecked: Number,
+                        onChange: ()=>setNumber(!Number)
                     }, void 0, false, {
                         fileName: "main.js",
                         lineNumber: 47,
-                        columnNumber: 13
+                        columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                         children: "Number"
                     }, void 0, false, {
                         fileName: "main.js",
                         lineNumber: 48,
-                        columnNumber: 13
+                        columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                         type: "checkbox",
-                        defaultChecked: charChanged,
-                        onChange: ()=>setcharChanged(!charChanged)
+                        defaultChecked: Character,
+                        onChange: ()=>setCharacter(!Character)
                     }, void 0, false, {
                         fileName: "main.js",
                         lineNumber: 50,
@@ -818,23 +821,23 @@ function PasswordGenerator() {
                     }, void 0, false, {
                         fileName: "main.js",
                         lineNumber: 51,
-                        columnNumber: 13
+                        columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "main.js",
                 lineNumber: 43,
-                columnNumber: 9
+                columnNumber: 13
             }, this)
         ]
     }, void 0, true);
 }
-_s(PasswordGenerator, "l5TFebV9vls2Z8J40v8u5aLPIac=");
+_s(PasswordGenerator, "jKOjvyazVjH50glExkz9ilJP2mI=");
 _c = PasswordGenerator;
 const root = (0, _clientDefault.default).createRoot(document.getElementById('root'));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(PasswordGenerator, {}, void 0, false, {
     fileName: "main.js",
-    lineNumber: 69,
+    lineNumber: 70,
     columnNumber: 13
 }, undefined));
 var _c;

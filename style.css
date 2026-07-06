@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#root{
+    width: 400px;
+    height: 150px;
+    padding-bottom: 20px;
+    background-color: azure;
+   text-align: center;
+}
+button{
+    width: 50px;
+    height: 40px;
+    margin-right: 10px;
+}

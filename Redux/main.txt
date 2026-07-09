@@ -1,0 +1,1 @@
+reducer are the methods which we are usuing to manipulate varibles like incremnet menthod decrement method fibonacci method

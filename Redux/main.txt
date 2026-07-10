@@ -1,1 +1,5 @@
 reducer are the methods which we are usuing to manipulate varibles like incremnet menthod decrement method fibonacci method
+
+1:npm install react-redux
+npm install @reduxjs/toolkit
+npm install

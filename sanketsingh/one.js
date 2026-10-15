@@ -26,5 +26,3 @@ p
     function fulfillHandler(value){ console.log(`Inside Fulfill Handler value is :${value}`)},
     function rejectionHandler(value){console.log(`Inside rejection Handler value is :${value}`)}
 )
-
-

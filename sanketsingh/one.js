@@ -18,7 +18,7 @@ function promisetime(){
 
     })
 }
-console.log("Starting..........");
+console.log("Starting");
 let p=promisetime();
 
 p
